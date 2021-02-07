@@ -1,0 +1,392 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Overall Formatting the styling of links*/
+
+ul, nav {
+    list-style: none;
+  
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover {
+    color: black;
+
+
+}
+
+@media screen and (max-width: 1000px) {
+    header {
+        flex-direction: column !important;
+        height: 26vh !important;
+
+    }
+
+    .hero .background-image {
+        position: absolute !important;
+        background-size: 100% 100% !important;
+        width: 100vw !important;
+        height: 800px !important;
+        top: 100px !important;
+        background-color: black !important;
+    
+    }
+
+    .hero  .heroContent {
+        margin: 0 !important;
+        padding: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        top: 100px !important;
+        height: 800px !important;
+        width: 100% !important;
+
+
+    }
+
+    .logo {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
+        padding-top: 30px !important;
+
+    }
+
+    header nav {
+        display: flex !important;
+        justify-content: space-evenly !important;
+    }
+
+    .products p {
+        padding: 50px 20px !important; 
+    }
+
+
+}
+
+@media screen and (max-width: 600px) {
+
+    header {
+        height: 17vh !important;
+        justify-content: center !important;
+        margin: 0 !important;
+        padding-top: 10px !important;
+    }
+
+    header nav {
+        flex-direction: column !important;
+        position: absolute !important ;
+        right: 0px !important;
+        margin: 0 !important;
+        height: 60vh !important;
+        top: 15vh !important;
+        background-color: #8a8a8a !important;
+        width: 40% !important;
+        align-items: center !important;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    header .logo {
+        margin: 0 !important;
+    }
+
+    header img {
+        height:75px !important;
+        width: 75px !important;
+    
+    }
+
+    header nav li {
+        padding: 5px 0px !important;
+        opacity: 0;
+    }
+
+    .logo {
+        padding-bottom: 35px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-evenly !important;
+        text-align: center !important;
+        width: 100vw;
+        /* padding-top: 5px; */
+    }
+
+    .burger {
+        display: block !important;
+    }
+
+    .nav-active {
+        transform: translateX(0%) !important;
+    }
+
+    @keyframes navLinkFade{
+        from{
+            opacity: 0;
+            transform: translateX(50px);
+
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0px);
+
+        }
+    }
+
+    .toggle .line1{
+        transform: rotate(-45deg) translate(-5px, 6px);
+        
+    }
+
+    .toggle .line2{
+        opacity: 0;
+    }
+
+    .toggle .line3{
+        transform: rotate(45deg) translate(-5px, -6px);
+
+    }
+
+    .products p {
+        font: normal 30px "Roboto", sans-serif !important;
+    }
+
+    footer {
+        font: normal 15px "Roboto", sans-serif !important;
+    }
+
+    .hero .heroContent {
+        top: 15px !important;
+    }
+
+    .hero .background-image {
+        position: absolute !important;
+        background-size: 100% 100% !important;
+        top: 98px !important;
+        width: 100vw !important;
+        height: 700px !important;
+        background-color: black !important;
+    
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    header nav li {
+        font-size: 103% !important;
+    }
+
+    .hero .heroContent {
+        top: -76px !important;
+    }
+
+    .hero .background-image {
+        position: absolute !important;
+        background-size: 100% 100% !important;
+        top: 98px !important;
+        width: 100vw !important;
+        height: 483px !important;
+        background-color: black !important;
+    }
+    .hero {
+        height: 90vh !important;
+    }
+
+}
+
+/*Styling for navbar*/
+
+header {
+    position: fixed;
+    height: 15vh;
+    width: 100%;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    color: #fff;
+    background-color: #8a8a8a;
+    opacity: 1;
+    box-shadow: 0px 5px 5px black;
+    z-index: 1;
+}
+
+header h2 {
+    margin-left: 10px;
+}
+
+header img {
+    height:100px;
+    width: 100px;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: -3px 3px black;
+
+}
+
+header .logo {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin: 0px 15px 0px 35px; 
+    padding: 5px 0px 10px 3px;
+
+}
+
+header nav {
+    display: flex;
+    margin: 10px 35px;
+    color: #fff; 
+    font-size: 105%;
+    font-weight: 600;
+    word-spacing: 1px;
+}
+
+header nav li {
+    display: flex;
+    align-content: space-evenly;
+    padding: 16px;
+}
+
+.burger {
+    display: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.burger div{ 
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+/* Styling for hero and hero content */
+
+.hero {
+        position: static;
+        justify-content: center;
+        text-align: center;
+        min-height: 100vh;
+        color: #fff;
+    }
+
+.hero .background-image {
+    position: absolute;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+   
+
+}
+
+.hero .heroContent {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+    opacity: 0;
+    animation: fadein .75s ease-in .5s forwards;
+}
+
+@keyframes fadein {
+    100% {
+    opacity: 1;
+    }
+}
+
+.hero h1 {
+    font: bold 55px "Roboto", sans-serif;
+}
+.hero h3 {
+    font: normal 30px "Roboto", sans-serif;
+    padding-top: 50px;
+
+}
+
+/* Styling for Products section */
+
+.products {
+    background-color: #fff;
+    border: 0px 225px;
+}
+
+.products li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.products .hopGroup {
+    background-color: #b6b6b6;
+}
+
+.products .grain {
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+}
+
+.products .hops {
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+}
+
+.products .fermenter {
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+}
+
+.products h4 {
+    font: normal 60px "Roboto", sans-serif;
+    padding: 15px 0px;
+}
+
+.products p {
+    font: normal 40px "Roboto", sans-serif;
+    padding: 50px 400px;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #8a8a8a;
+    padding: 5px 20px;
+    color: #fff;
+    font: normal 20px "Roboto", sans-serif;
+    text-align: center;
+    line-height: 30px;
+}
+
+footer ul li .underline {
+    border-bottom: 1px solid #fff;
+}
+
+footer i {
+    color: #fff;
+}
